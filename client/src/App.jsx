@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_BASE_URL || '/api'}/boards`)
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/boards`)
       .then((r) => r.json())
       .then((data) => {
         if (Array.isArray(data) && data.length > 0) {
